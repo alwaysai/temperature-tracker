@@ -23,7 +23,8 @@ You can also post questions and comments on our Discord Community at: https://di
 ## Usage
 A table of utility functions and their usage is provided below. 
 
-| Function |Arguments | Return Value| Usage |
+| Function | Arguments | Return Value | Usage |
+| :---     | :---      | :---         |	:---  |
 | minimum | () | (float, time) | Finds and returns the minimum temperature gathered so far as well as the corresponding time stamp, using the instance list. |
 | minimum_from | [(float, time)] | (float, time) | Finds and returns the minimum temperature gathered so far as well as the corresponding time stamp, using the input list. |
 | maximum | () | (float, time) | Finds and returns the maximum temperature gathered so far as well as the corresponding time stamp, using the instance list. |
