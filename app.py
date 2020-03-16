@@ -57,7 +57,9 @@ def main():
                     text.append("{}: {:2.2f}%".format(
                         prediction.label, prediction.confidence * 100))
 
-               
+                # blank line for readability
+                text.append("")
+
                 # get an instance of the cpu temperature
                 temperature_tracker.update()
 
@@ -65,13 +67,13 @@ def main():
                 now = temperature_tracker.now()
 
                 # log block showing current temperature
-                print(str(now[0]) + " " + time.strftime('%Y-%m-%d %H:%M:%S', now[1]))
+                text.append("{:1.2f}C/{:1.2f}F at time {}\n".format(now[0], ((now[0]*(9 / 5)) + 32),time.strftime('%Y-%m-%d %H:%M:%S', now[1])))
 
                 # details whether the temperature is safe for a Raspberry Pi 4
                 if now[0] < temperature_tracker.MAX_TEMP_RASP4:
-                    print("Temperature is safe")
+                    text.append("Temperature is safe")
                 else:
-                    print("You should shut down")
+                    text.append("You should shut down")
 
 
                 streamer.send_data(frame, text)
