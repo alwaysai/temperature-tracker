@@ -73,17 +73,19 @@ def main():
                 if now[0] < temperature_tracker.MAX_TEMP_RASP4:
                     text.append("Temperature is safe")
                 else:
-                    text.append("You should shut down")
+                    text.append("TEMPERATURE IS NO LONGER SAFE")
 
 
                 streamer.send_data(frame, text)
 
                 fps.update()
 
+
                 # exit program if maximum safe temp has been reached
                 if now[0] >= temperature_tracker.MAX_TEMP_RASP4:
-                    print("Maximum safe temperature reached, stopping program")
+                    print("MAXIMUM SAFE TEMPERATURE REACHED. Powering down application.")
                     break
+
 
                 if streamer.check_exit():
                     break
