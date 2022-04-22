@@ -17,7 +17,7 @@ You can alter the code to used different detection and classification models: ht
 ## Troubleshooting
 If you are having trouble connecting to your edge device, use the CLI configure command to reset the device. Please see the following page for more details: https://alwaysai.co/docs/reference/cli_commands.html
 
-You can also post questions and comments on our Discord Community at: https://discord.gg/R2uM36U
+You can also post questions and comments on our Discord Community at: https://discord.gg/alwaysai
 
 
 ## Usage
@@ -43,3 +43,4 @@ A table of utility functions and their usage is provided below.
 | get_stop | () |  | Returns the recorded stop time for the instance. |
 | summary | () | String | Returns a string containing all of the readings and corresponding timestamps, and the minimum, the maximum, and the average temperature readings, along with start and stop data of the instance temperature list. All temperature readings are displayed in Celsius and Fahrenheit. |
 | summary_from | [(float, time)] | String | Returns a string containing all of the readings and corresponding timestamps, and the minimum, the maximum, and the average temperature readings, along with start and stop data of the input temperature list. All temperature readings are displayed in Celsius and Fahrenheit. |
+
